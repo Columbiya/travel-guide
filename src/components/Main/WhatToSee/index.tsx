@@ -12,7 +12,10 @@ export const WhatToSee: FC<WhatToSeeProps> = ({ items }) => {
       <Container>
         <div className="flex gap-5">
           {items.map((item) => (
-            <div className="rounded-3xl overflow-hidden hover:scale-125 transition-all">
+            <div
+              className="rounded-3xl overflow-hidden hover:scale-125 transition-all"
+              key={item.id}
+            >
               {item.name}
               {item.sectionCode}
 
